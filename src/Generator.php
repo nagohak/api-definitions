@@ -1,6 +1,6 @@
 <?php
 
-namespace DEVJS\SwaggerGenerator;
+namespace DEVJS\ApiDefinitions;
 
 class Generator
 {

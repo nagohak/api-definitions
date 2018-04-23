@@ -1,6 +1,6 @@
 <?php
 
-namespace DEVJS\SwaggerGenerator;
+namespace DEVJS\ApiDefinitions;
 
 use Illuminate\Support\ServiceProvider;
 
@@ -11,7 +11,7 @@ class GeneratorServiceProvider extends ServiceProvider
     public function register(): void
     {
         $this->app->singleton(Generator::class, function ($app){
-            return app('DEVJS\SwaggerGenerator\Generator');
+            return app('DEVJS\ApiDefinitions\Generator');
         });
     }
 
