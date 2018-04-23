@@ -23,7 +23,7 @@ class Generator
         $this->definitionParser = $definitionParser;
     }
 
-    public function generate()
+    public function generate(): string
     {
         /** Namespaces */
         $modelNamespaces = $this->classFinder->getNamespaces('app/Entities/');

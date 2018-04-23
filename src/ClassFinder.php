@@ -11,7 +11,7 @@ class ClassFinder
     public function getNamespaces(string $path)
     {
         $namespaces = [];
-        $allFiles = new RecursiveIteratorIterator(new RecursiveDirectoryIterator($path));
+        $allFiles = new RecursiveIteratorIterator(new RecursiveDirectoryIterator(base_path($path)));
         $phpFiles = new RegexIterator($allFiles, '/\.php$/');
         foreach ($phpFiles as $phpFile) {
             $content = file_get_contents($phpFile->getRealPath());
