@@ -11,7 +11,8 @@ class GeneratorServiceProvider extends ServiceProvider
     public function register(): void
     {
         $this->app->singleton(Generator::class, function ($app){
-            return app('DEVJS\ApiDefinitions\Generator');
+            $property = new Property();
+            return new Generator(new ClassFinder(), $property, new DefinitionParser($property));
         });
     }
 
